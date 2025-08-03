@@ -35,21 +35,24 @@
   </section>
 
   <script>
-    function toggleMenu() {
-      const links = document.getElementById('nav-links');
-      links.classList.toggle('active');
+  function toggleMenu() {
+    const links = document.getElementById('nav-links');
+    links.classList.toggle('active');
+  }
+
+  // Mostrar mensaje guardado desde localStorage
+  document.addEventListener("DOMContentLoaded", function () {
+    const mensajeGuardado = localStorage.getItem("mensajeGuardado");
+    const textarea = document.getElementById("mensaje");
+
+    if (mensajeGuardado && textarea) {
+      textarea.value = mensajeGuardado + "\n";
+      localStorage.removeItem("mensajeGuardado"); // para que no quede guardado siempre
     }
+  });
+</script>
 
-    // Mostrar mensaje si viene desde la URL
-    document.addEventListener("DOMContentLoaded", function () {
-      const textarea = document.getElementById("mensaje");
-      const params = new URLSearchParams(window.location.search);
-      const mensaje = params.get("mensaje");
 
-      if (mensaje && textarea) {
-        textarea.value = decodeURIComponent(mensaje) + "\n";
-      }
-    });
-  </script>
 </body>
 </html>
+
