@@ -327,3 +327,17 @@ grupo-card {
   background-color: #ff85c1;
   box-shadow: 0 6px 12px rgba(255, 105, 180, 0.4);
 }
+
+.contacto-info {
+  text-align: center;
+  padding: 15px;
+  background-color: #fce4ec;
+  font-size: 14px;
+  margin-top: 30px;
+}
+.contacto-info a {
+  color: #d81b60;
+  text-decoration: none;
+  font-weight: bold;
+}
+
