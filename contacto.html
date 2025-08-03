@@ -35,23 +35,26 @@
   </section>
 
   <script>
-    function toggleMenu() {
-      const links = document.getElementById('nav-links');
-      links.classList.toggle('active');
-    }
+  function toggleMenu() {
+    const links = document.getElementById('nav-links');
+    links.classList.toggle('active');
+  }
 
-    // Mostrar el mensaje en el textarea si viene desde productos o promo
-    window.addEventListener("DOMContentLoaded", () => {
-      const params = new URLSearchParams(window.location.search);
-      const producto = params.get("mensaje");
-      if (producto) {
-        const textarea = document.getElementById("mensaje");
-        textarea.value = producto + "\n";
-      }
-    });
-  </script>
+  // Script más seguro para precargar mensaje
+  document.addEventListener("DOMContentLoaded", function () {
+    const textarea = document.getElementById("mensaje");
+    const urlParams = new URL(window.location.href);
+    const mensaje = urlParams.searchParams.get("mensaje");
+
+    if (mensaje && textarea) {
+      textarea.value = decodeURIComponent(mensaje) + "\n";
+    }
+  });
+</script>
+
 </body>
 </html>
+
 
 
 
