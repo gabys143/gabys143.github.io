@@ -17,7 +17,7 @@
       <li><a href="index.html">Inicio</a></li>
       <li><a href="grupos.html">Grupos</a></li>
       <li><a href="productos.html">Productos</a></li>
-      <li><a href="promo.html">Promo</a></li>
+      <li><a href="promo.html">Promos</a></li>
       <li><a href="contacto.html" class="active">Contacto</a></li>
     </ul>
   </nav>
@@ -35,27 +35,21 @@
   </section>
 
   <script>
-  function toggleMenu() {
-    const links = document.getElementById('nav-links');
-    links.classList.toggle('active');
-  }
-
-  // Script más seguro para precargar mensaje
-  document.addEventListener("DOMContentLoaded", function () {
-    const textarea = document.getElementById("mensaje");
-    const urlParams = new URL(window.location.href);
-    const mensaje = urlParams.searchParams.get("mensaje");
-
-    if (mensaje && textarea) {
-      textarea.value = decodeURIComponent(mensaje) + "\n";
+    function toggleMenu() {
+      const links = document.getElementById('nav-links');
+      links.classList.toggle('active');
     }
-  });
-</script>
 
+    // Mostrar mensaje si viene desde la URL
+    document.addEventListener("DOMContentLoaded", function () {
+      const textarea = document.getElementById("mensaje");
+      const params = new URLSearchParams(window.location.search);
+      const mensaje = params.get("mensaje");
+
+      if (mensaje && textarea) {
+        textarea.value = decodeURIComponent(mensaje) + "\n";
+      }
+    });
+  </script>
 </body>
 </html>
-
-
-
-
-
