@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Productos | K-Pop Store</title>
+  <link rel="stylesheet" href="/estilo.css" />
+  <style>
+    .producto-card {
+      display: inline-block;
+      margin: 1rem;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .producto-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .producto-card img {
+      width: 200px;
+      height: auto;
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+    }
+
+    .producto-card p {
+      margin-top: 0.5rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">K-Pop Store</div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <div></div><div></div><div></div>
+    </div>
+    <ul id="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="grupos.html">Grupos</a></li>
+      <li><a href="productos.html" class="active">Productos</a></li>
+      <li><a href="promo.html">Promo</a></li> <!-- ✅ ENLACE AGREGADO -->
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <section id="skz" class="productos-section">
+    <h2>Productos de Stray Kids</h2>
+    <div class="producto-card" onclick="redirigirAContacto('LomoCards SKZ')">
+      <img src="/img/skz-lomo.jpg" alt="SKZ Lomo">
+      <p>LomoCards SKZ</p>
+      <p><strong>$1000 pesos por Lomo</strong></p>
+      <p><strong>$1500 pesos por 2 Lomos</strong></p>
+    </div>
+    <div class="producto-card" onclick="redirigirAContacto('Sticker Stray Kids')">
+      <img src="/img/skzstickers.jpg" alt="SKZ sticker">
+      <p>Stickers Stray Kids</p>
+      <p><strong>$500 pesos por sticker</strong></p>
+    </div>
+  </section>
+
+  <section id="twice" class="productos-section">
+    <h2>Productos de TWICE</h2>
+    <div class="producto-card" onclick="redirigirAContacto('Lomocards TWICE')">
+      <img src="/img/twicelomocards.jpg" alt="Lomocard TWICE">
+      <p>Lomocards TWICE</p>
+      <p><strong>$1000 pesos por Lomo</strong></p>
+      <p><strong>$1500 pesos por 2 Lomos</strong></p>
+    </div>
+    <div class="producto-card" onclick="redirigirAContacto('Stickers oficiales TWICE')">
+      <img src="/img/twicestickers.png" alt="Stickers TWICE">
+      <p>Stickers oficiales</p>
+      <p><strong>$500 pesos por sticker</strong></p>
+    </div>
+  </section>
+
+  <section id="babymonster" class="productos-section">
+    <h2>Productos de BABYMONSTER</h2>
+    <div class="producto-card" onclick="redirigirAContacto('Lomocards BabyMonster')">
+      <img src="/img/bm-lomo.jpg" alt="BABYMONSTER Lomo">
+      <p>Lomocards BabyMonster</p>
+      <p><strong>$1500 pesos por 2 Lomos</strong></p>
+    </div>
+    <div class="producto-card" onclick="redirigirAContacto('Stickers BABYMONSTER')">
+      <img src="/img/bmstickers.jpg" alt="stickers BABYMONSTER">
+      <p>Stickers BABYMONSTER</p>
+      <p><strong>$500 pesos por sticker</strong></p>
+    </div>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("nav-links").classList.toggle("active");
+    }
+
+    function redirigirAContacto(nombreProducto) {
+      const mensaje = encodeURIComponent("Producto: " + nombreProducto);
+      window.location.href = `contacto.html?mensaje=${mensaje}`;
+    }
+  </script>
+</body>
+</html>

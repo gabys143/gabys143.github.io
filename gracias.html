@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>¡Gracias por tu pedido!</title>
+  <link rel="stylesheet" href="estilo.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="logo">K-Pop Store</div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <div></div><div></div><div></div>
+    </div>
+    <ul id="nav-links">
+      <li><a href="index.html" class="active">Inicio</a></li>
+      <li><a href="grupos.html">Grupos</a></li>
+      <li><a href="productos.html">Productos</a></li>
+      <li><a href="promo.html">Promo</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <h2>✨ ¡Gracias por tu pedido, K-poper adorabl@! ✨</h2>
+    <p>💌 Hemos recibido tu mensaje. En breve nos pondremos en contacto por correo electrónico.</p>
+    <p>Mientras tanto, sigue explorando los productos de tus idols favoritos 💿</p>
+    <a href="index.html" class="btn-rosado">Volver al inicio</a>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      const links = document.getElementById('nav-links');
+      links.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
