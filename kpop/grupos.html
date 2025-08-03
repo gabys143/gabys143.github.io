@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Grupos | K-Pop Store</title>
+  <link rel="stylesheet" href="/estilo.css" />
+</head>
+
+<div id="tooltip" class="tooltip">Haga click aquí para ver la mercancía</div>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("nav-links").classList.toggle("active");
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const tooltip = document.getElementById("tooltip");
+    const images = document.querySelectorAll(".grupo-card img");
+
+    images.forEach((img) => {
+      img.addEventListener("mouseenter", () => {
+        tooltip.classList.add("show");
+      });
+
+      img.addEventListener("mousemove", (e) => {
+        tooltip.style.top = e.pageY + 10 + "px";
+        tooltip.style.left = e.pageX + 10 + "px";
+      });
+
+      img.addEventListener("mouseleave", () => {
+        tooltip.classList.remove("show");
+      });
+    });
+  });
+</script>
+
+<body>
+
+  <nav>
+    <div class="logo">K-Pop Store</div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <ul id="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="grupos.html" class="active">Grupos</a></li>
+      <li><a href="productos.html">Productos</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="promo.html">Promo</a></li> <!-- ✅ Agregado aquí -->
+    </ul>
+  </nav>
+
+  <section class="grupos-section">
+    <h2>✨ Nuestros Grupos</h2>
+    <p class="descripcion">Aquí encontrarás mercancía oficial de tus favoritos 💿</p>
+
+    <div class="grupo-container">
+
+      <!-- SKZ -->
+      <div class="grupo-card" onclick="location.href='productos.html#skz';">
+        <img src="/img/skz-merch.jpg" alt="Merch SKZ">
+        <h3>Stray Kids</h3>
+        <p>Encuentra stickers, lomo y photocards, y mucho más de SKZ.</p>
+      </div>
+
+      <!-- TWICE -->
+      <div class="grupo-card" onclick="location.href='productos.html#twice';">
+        <img src="/img/twice-merch.jpg" alt="Merch TWICE">
+        <h3>TWICE</h3>
+        <p>Photocards, Lomocards, stickers y más de las reinas del K-Pop.</p>
+      </div>
+
+      <!-- BABYMONSTER -->
+      <div class="grupo-card" onclick="location.href='productos.html#babymonster';">
+        <img src="/img/babymonster-merch.jpg" alt="Merch BabyMonster">
+        <h3>BABYMONSTER</h3>
+        <p>Todo lo nuevo y exclusivo del grupo más prometedor de YG.</p>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>

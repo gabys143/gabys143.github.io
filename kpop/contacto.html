@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contacto | K-Pop Store</title>
+  <link rel="stylesheet" href="estilo.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="logo">K-Pop Store</div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <div></div><div></div><div></div>
+    </div>
+    <ul id="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="grupos.html">Grupos</a></li>
+      <li><a href="productos.html">Productos</a></li>
+      <li><a href="promo.html">Promo</a></li>
+      <li><a href="contacto.html" class="active">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <section class="contacto-section">
+    <h2>Contáctanos</h2>
+
+    <form name="pedido" method="POST" data-netlify="true" action="/gracias.html">
+      <input type="hidden" name="form-name" value="pedido" />
+
+      <input type="text" name="nombre" placeholder="Tu nombre" required />
+      <input type="email" name="correo" placeholder="Tu correo electrónico" required />
+      <input type="text" name="cantidad" placeholder="¿Cuántos productos quieres?" required />
+      
+      <textarea id="mensaje" name="mensaje" rows="5" placeholder="🌟Escribe tu pedido aquí🌟" required></textarea>
+      
+      <button type="submit">Enviar mi pedido</button>
+    </form>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      const links = document.getElementById('nav-links');
+      links.classList.toggle('active');
+    }
+
+    // Mostrar nombre del producto si viene desde productos o promo
+    window.addEventListener("DOMContentLoaded", () => {
+      const params = new URLSearchParams(window.location.search);
+      const producto = params.get('mensaje');
+      if (producto) {
+        const textarea = document.getElementById('mensaje');
+        textarea.value = producto + "\n";
+      }
+    });
+  </script>
+</body>
+</html>

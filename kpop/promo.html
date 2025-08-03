@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Promociones | K-Pop Store</title>
+  <link rel="stylesheet" href="estilo.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="logo">K-Pop Store</div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <div></div><div></div><div></div>
+    </div>
+    <ul id="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="grupos.html">Grupos</a></li>
+      <li><a href="productos.html">Productos</a></li>
+      <li><a href="promo.html" class="active">Promos</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <section class="promo-section">
+    <h2>📰 Noticias K-Pop</h2>
+    <article class="noticia">
+      <h3>Nuevas Lomocards y stickers de SKZ</h3>
+      <p>El próximo mes llegan ¡Reserva el tuyo ya!</p>
+      <a class="btn-rosado" href="contacto.html?mensaje=Quiero%20reservar%20(cantidad de stickers)%20de%20Stray%20Kids">Reservar</a>
+    </article>
+
+    <article class="noticia">
+      <h3>TWICE, lomocards y varios stickers</h3>
+      <p>¡Prepárate para la promoción de productos de TWICE que tenemos!</p>
+      <a class="btn-rosado" href="contacto.html?mensaje=Estoy%20interesad@%20en%20la%20promoción%20que%20tienen%20de%20TWICE">Solicitar</a>
+    </article>
+  </section>
+
+  <section class="proximos-articulos">
+    <h2>📦Productos</h2>
+
+    <div class="producto">
+      <h4>Lomocards DRIP BABYMONSTER</h4>
+      <p>En venta, a tan solo 1000 cada una</p>
+      <a class="btn-rosado" href="contacto.html?mensaje=Quiero%20las%20lomocards%20de%20BABYMONSTER">Pedir</a>
+    </div>
+
+    <div class="producto">
+      <h4>Caja con 5 stickers de cualquier grupo</h4>
+      <p>A tan solo $3.000 </p>
+      <a class="btn-rosado" href="contacto.html?mensaje=Reservar%20 5 stickers%20de%20de%20skz%20edición%20limitada">Pedir</a>
+    </div>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      const links = document.getElementById('nav-links');
+      links.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

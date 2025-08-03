@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Inicio | K-Pop Store</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+  <nav>
+    <div class="logo">K-Pop Store</div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <ul id="nav-links">
+      <li><a href="index.html" class="active">Inicio</a></li>
+      <li><a href="grupos.html">Grupos</a></li>
+      <li><a href="productos.html">Productos</a></li>
+      <li><a href="promo.html">Promo</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <h2>🎧 Bienvenid@ a la tienda de K-Pop</h2>
+    <p>Descubre todo sobre tus grupos favoritos, compra productos oficiales y únete a la comunidad K-popera más adorable.</p>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      const links = document.getElementById('nav-links');
+      links.classList.toggle('active');
+    }
+  </script>
+
+</body>
+</html>

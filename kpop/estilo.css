@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom right, #c8d6ff, #f7c6d9);
+  color: #333;
+  padding-top: 80px;
+}
+
+/* NAV BAR */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f7c6d9;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+nav .logo {
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #fff;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #444;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle div {
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 4px 0;
+}
+
+/* SECCIONES BASE */
+section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 25px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h2 {
+  color: #d08daf;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+p {
+  line-height: 1.6;
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+/* FORMULARIOS contacto.html */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+input, textarea {
+  padding: 12px;
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+button {
+  background-color: #d5bde2;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 25px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #f7c6d9;
+}
+
+/* IMÁGENES grupos.html */
+grupo-card {
+  background: #ffffff;
+  width: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.grupo-card:hover {
+  transform: translateY(-8px);
+}
+
+.grupo-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.grupo-card h3 {
+  margin: 15px 0 5px;
+  font-size: 1.5em;
+  color: #d08daf;
+}
+
+.grupo-card p {
+  padding: 0 15px 20px;
+  font-size: 1em;
+  color: #444;
+}
+
+@media (max-width: 768px) {
+  .grupo-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .grupo-card {
+    width: 90%;
+  }
+}
+
+/* Estilo para agrandar imagen al pasar el mouse */
+.grupo-card img {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.grupo-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Tooltip */
+.tooltip {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #222;
+  font-size: 14px;
+  padding: 6px 10px;
+  border-radius: 10px;
+  pointer-events: none;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: none;
+}
+
+/* Animación al hacer hover en la imagen */
+.grupo-card img {
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  position: relative;
+}
+
+.grupo-card:hover img {
+  transform: scale(1.07);
+  animation: bounce 0.3s ease;
+}
+
+/* Efecto de rebote suave */
+@keyframes bounce {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.08); }
+  100% { transform: scale(1.07); }
+}
+
+/* Tooltip con animación */
+.tooltip {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #222;
+  font-size: 14px;
+  padding: 6px 10px;
+  border-radius: 10px;
+  pointer-events: none;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  transform: translateY(-5px);
+}
+
+.tooltip.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.grupo-card img {
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  position: relative;
+}
+
+.grupo-card:hover img {
+  transform: scale(1.07);
+  animation: bounce 0.3s ease;
+}
+
+@keyframes bounce {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.08); }
+  100% { transform: scale(1.07); }
+}
+
+.tooltip {
+  position: absolute;
+  background-color: #fff;
+  color: #000;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 9999;
+}
+
+.tooltip.show {
+  opacity: 1;
+  transform: translateY(-8px);
+}
+
+.grupo-card img {
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  position: relative;
+}
+
+.grupo-card:hover img {
+  transform: scale(1.07);
+  animation: bounce 0.3s ease;
+}
+
+@keyframes bounce {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.08); }
+  100% { transform: scale(1.07); }
+}
+
+.tooltip {
+  position: absolute;
+  background-color: white;
+  color: black;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  white-space: nowrap;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(0);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 1000;
+}
+
+.tooltip.show {
+  opacity: 1;
+  transform: translateY(-5px);
+}
+
+
+.producto-card img {
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.btn-rosado {
+  display: inline-block;
+  background-color: #ff69b4;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3);
+}
+
+.btn-rosado:hover {
+  background-color: #ff85c1;
+  box-shadow: 0 6px 12px rgba(255, 105, 180, 0.4);
+}
