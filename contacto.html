@@ -26,28 +26,33 @@
     <h2>Contáctanos</h2>
 
     <form action="https://formspree.io/f/xwpqnayl" method="POST">
-  <input type="text" name="nombre" placeholder="Tu nombre" required>
-  <input type="email" name="correo" placeholder="Tu correo electrónico" required>
-  <input type="text" name="cantidad" placeholder="¿Cuántos productos quieres?" required>
-  <textarea name="mensaje" rows="5" placeholder="🌟Escribe tu pedido aquí🌟" required></textarea>
-  <button type="submit">Enviar mi pedido</button>
-</form>
-
+      <input type="text" name="nombre" placeholder="Tu nombre" required>
+      <input type="email" name="correo" placeholder="Tu correo electrónico" required>
+      <input type="text" name="cantidad" placeholder="¿Cuántos productos quieres?" required>
+      <textarea id="mensaje" name="mensaje" rows="5" placeholder="🌟Escribe tu pedido aquí🌟" required></textarea>
+      <button type="submit">Enviar mi pedido</button>
+    </form>
   </section>
 
   <script>
-  // Mostrar el mensaje en el textarea si viene por la URL
-  window.addEventListener("DOMContentLoaded", () => {
-    const params = new URLSearchParams(window.location.search);
-    const producto = params.get("mensaje");
-    if (producto) {
-      const textarea = document.getElementById("mensaje");
-      textarea.value = producto + "\n";
+    function toggleMenu() {
+      const links = document.getElementById('nav-links');
+      links.classList.toggle('active');
     }
-  });
-</script>
+
+    // Mostrar el mensaje en el textarea si viene desde productos o promo
+    window.addEventListener("DOMContentLoaded", () => {
+      const params = new URLSearchParams(window.location.search);
+      const producto = params.get("mensaje");
+      if (producto) {
+        const textarea = document.getElementById("mensaje");
+        textarea.value = producto + "\n";
+      }
+    });
+  </script>
 </body>
 </html>
+
 
 
 
