@@ -36,22 +36,18 @@
   </section>
 
   <script>
-    function toggleMenu() {
-      const links = document.getElementById('nav-links');
-      links.classList.toggle('active');
+  // Mostrar el mensaje en el textarea si viene por la URL
+  window.addEventListener("DOMContentLoaded", () => {
+    const params = new URLSearchParams(window.location.search);
+    const producto = params.get("mensaje");
+    if (producto) {
+      const textarea = document.getElementById("mensaje");
+      textarea.value = producto + "\n";
     }
-
-    // Mostrar nombre del producto si viene desde productos o promo
-    window.addEventListener("DOMContentLoaded", () => {
-      const params = new URLSearchParams(window.location.search);
-      const producto = params.get('mensaje');
-      if (producto) {
-        const textarea = document.getElementById('mensaje');
-        textarea.value = producto + "\n";
-      }
-    });
-  </script>
+  });
+</script>
 </body>
 </html>
+
 
 
