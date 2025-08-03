@@ -5,6 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Promociones | K-Pop Store</title>
   <link rel="stylesheet" href="estilo.css" />
+  <style>
+    .cuadro-precios {
+      background-color: #fff0f5;
+      border: 2px dashed #d81b60;
+      padding: 20px;
+      margin: 40px auto;
+      max-width: 400px;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: left;
+    }
+
+    .columna-precios h4 {
+      margin-top: 10px;
+      color: #333;
+    }
+
+    .columna-precios p {
+      margin: 5px 0;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
 
@@ -39,37 +61,39 @@
   </section>
 
   <section class="proximos-articulos">
-  <h2>📦Productos</h2>
+    <h2>📦Productos</h2>
 
-  <div class="cuadro-precios">
-    <h3>💵 Precios</h3>
-    <div class="columna-precios">
-      <h4><u>Stickers</u></h4>
-      <p>1 sticker: $200</p>
-      <p>3 stickers: $500</p>
-
-      <h4><u>Lomocards</u></h4>
-      <p>1 lomo normal: $1000</p>
-      <p>1 lomo promo: $1000</p>
-      <p>2 lomos normales: $2000</p>
-      <p>2 lomos promo: $1500</p>
-      <p>1 lomo promo + 1 normal: $1500</p>
+    <div class="producto">
+      <h4>Lomocards DRIP BABYMONSTER</h4>
+      <p>En venta, a tan solo 1000 cada una</p>
+      <a class="btn-rosado" href="contacto.html" onclick="guardarMensaje('Quiero las lomocards de BABYMONSTER')">Pedir</a>
     </div>
-  </div>
 
-  <div class="producto">
-    <h4>Lomocards DRIP BABYMONSTER</h4>
-    <p>En venta, a tan solo 1000 cada una</p>
-    <a class="btn-rosado" href="contacto.html" onclick="guardarMensaje('Quiero las lomocards de BABYMONSTER')">Pedir</a>
-  </div>
+    <div class="producto">
+      <h4>Caja con 5 stickers de cualquier grupo</h4>
+      <p>A tan solo $3.000</p>
+      <a class="btn-rosado" href="contacto.html" onclick="guardarMensaje('Quiero reservar 5 stickers de cualquier grupo')">Reservar</a>
+    </div>
+  </section>
 
-  <div class="producto">
-    <h4>Caja con 5 stickers de cualquier grupo</h4>
-    <p>A tan solo $3.000</p>
-    <a class="btn-rosado" href="contacto.html" onclick="guardarMensaje('Quiero reservar 5 stickers de cualquier grupo')">Reservar</a>
-  </div>
-</section>
+  <!-- NUEVA SECCIÓN SOLO PARA PRECIOS -->
+  <section class="precios-separados">
+    <h2>💸 Precios</h2>
+    <div class="cuadro-precios">
+      <div class="columna-precios">
+        <h4><u>Stickers</u></h4>
+        <p>1 sticker: $200</p>
+        <p>3 stickers: $500</p>
 
+        <h4><u>Lomocards</u></h4>
+        <p>1 lomo normal: $1000</p>
+        <p>1 lomo promo: $1000</p>
+        <p>2 lomos normales: $2000</p>
+        <p>2 lomos promo: $1500</p>
+        <p>1 lomo promo + 1 normal: $1500</p>
+      </div>
+    </div>
+  </section>
 
   <footer class="contacto-info">
     <p>¿Tienes dudas? Contáctanos por WhatsApp: +57 324 6501378 📱 o al correo: <a href="mailto:ndriaza@redboston.edu.co">ndriaza@redboston.edu.co</a></p>
@@ -88,5 +112,3 @@
 
 </body>
 </html>
-
-
