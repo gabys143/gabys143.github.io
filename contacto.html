@@ -25,17 +25,14 @@
   <section class="contacto-section">
     <h2>Contáctanos</h2>
 
-    <form name="pedido" method="POST" data-netlify="true" action="/gracias.html">
-      <input type="hidden" name="form-name" value="pedido" />
+    <form action="https://formspree.io/f/TU-CODIGO-AQUI" method="POST">
+  <input type="text" name="nombre" placeholder="Tu nombre" required>
+  <input type="email" name="correo" placeholder="Tu correo electrónico" required>
+  <input type="text" name="cantidad" placeholder="¿Cuántos productos quieres?" required>
+  <textarea name="mensaje" rows="5" placeholder="🌟Escribe tu pedido aquí🌟" required></textarea>
+  <button type="submit">Enviar mi pedido</button>
+</form>
 
-      <input type="text" name="nombre" placeholder="Tu nombre" required />
-      <input type="email" name="correo" placeholder="Tu correo electrónico" required />
-      <input type="text" name="cantidad" placeholder="¿Cuántos productos quieres?" required />
-      
-      <textarea id="mensaje" name="mensaje" rows="5" placeholder="🌟Escribe tu pedido aquí🌟" required></textarea>
-      
-      <button type="submit">Enviar mi pedido</button>
-    </form>
   </section>
 
   <script>
@@ -56,3 +53,4 @@
   </script>
 </body>
 </html>
+
