@@ -32,27 +32,29 @@
       <input type="text" name="cantidad" placeholder="¿Cuántos productos quieres?" required />
       
       <textarea id="mensaje" name="mensaje" rows="5" placeholder="🌟Escribe tu pedido aquí🌟" required></textarea>
+
       
       <button type="submit">Enviar mi pedido</button>
     </form>
   </section>
 
   <script>
-    function toggleMenu() {
-      const links = document.getElementById('nav-links');
-      links.classList.toggle('active');
-    }
+  function toggleMenu() {
+    const links = document.getElementById('nav-links');
+    links.classList.toggle('active');
+  }
 
-    // Mostrar mensaje guardado desde localStorage
-    document.addEventListener("DOMContentLoaded", function () {
-      const mensajeGuardado = localStorage.getItem("mensajeGuardado");
-      const textarea = document.getElementById("mensaje");
-      if (mensajeGuardado && textarea) {
-        textarea.value = mensajeGuardado + "\n";
-        localStorage.removeItem("mensajeGuardado");
-      }
-    });
-  </script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const mensajeGuardado = localStorage.getItem("mensajeGuardado");
+    const textarea = document.getElementById("mensaje");
+    if (mensajeGuardado && textarea) {
+      textarea.value = mensajeGuardado + "\n";
+      localStorage.removeItem("mensajeGuardado");
+    }
+  });
+</script>
+
 </body>
 </html>
+
 
