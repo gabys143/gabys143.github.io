@@ -50,20 +50,23 @@
     <div class="producto">
       <h4>Caja con 5 stickers de cualquier grupo</h4>
       <p>A tan solo $3.000 </p>
-      <a class="btn-rosado" href="contacto.html" onclick="guardarMensaje('Reservar 5 stickers de SKZ edición limitada')">Pedir</a>
+      <a class="btn-rosado" href="contacto.html" onclick="guardarMensaje('Quiero reservar 5 stickers de Stray Kids')">Reservar</a>
+
     </div>
   </section>
 
   <script>
-    function toggleMenu() {
-      const links = document.getElementById('nav-links');
-      links.classList.toggle('active');
-    }
+  function toggleMenu() {
+    const links = document.getElementById('nav-links');
+    links.classList.toggle('active');
+  }
 
-    function guardarMensaje(mensaje) {
-      localStorage.setItem("mensajeGuardado", mensaje);
-    }
-  </script>
+  function guardarMensaje(mensaje) {
+    localStorage.setItem("mensajeGuardado", mensaje);
+  }
+</script>
+
 
 </body>
 </html>
+
