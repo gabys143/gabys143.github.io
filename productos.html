@@ -30,6 +30,20 @@
       margin-top: 0.5rem;
       font-weight: bold;
     }
+
+    .contacto-info {
+      text-align: center;
+      padding: 15px;
+      background-color: #fce4ec;
+      font-size: 14px;
+      margin-top: 30px;
+    }
+
+    .contacto-info a {
+      color: #d81b60;
+      text-decoration: none;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
@@ -43,104 +57,70 @@
       <li><a href="index.html">Inicio</a></li>
       <li><a href="grupos.html">Grupos</a></li>
       <li><a href="productos.html" class="active">Productos</a></li>
-      <li><a href="promo.html">Promo</a></li> <!-- ✅ ENLACE AGREGADO -->
+      <li><a href="promo.html">Promo</a></li>
       <li><a href="contacto.html">Contacto</a></li>
     </ul>
   </nav>
 
   <section id="skz" class="productos-section">
     <h2>Productos de Stray Kids</h2>
+
     <div class="producto-card" onclick="redirigirAContacto('LomoCards SKZ')">
       <img src="img/skz-lomo.jpg" alt="SKZ Lomo">
       <p>LomoCards SKZ</p>
-      <p><strong>$1000 pesos por Lomo</strong></p>
-      <p><strong>$1500 pesos por 2 Lomos</strong></p>
-      <script>
-    function toggleMenu() {
-      document.getElementById("nav-links").classList.toggle("active");
-    }
-
-    function redirigirAContacto(nombreProducto) {
-      const mensaje = encodeURIComponent("Producto: " + nombreProducto);
-      window.location.href = `contacto.html?mensaje=${mensaje}`;
-    }
-  </script>
+      <p>$1000 por 1 lomo</p>
+      <p>$2000 por 2 lomos</p>
+      <p>$1500 (1 promo + 1 normal)</p>
     </div>
-    <div class="producto-card" onclick="redirigirAContacto('Sticker Stray Kids')">
-      <img src="img/skzstickers.jpg" alt="SKZ sticker">
-      <p>Stickers Stray Kids</p>
-      <p><strong>$500 pesos por sticker</strong></p>
-      <script>
-    function toggleMenu() {
-      document.getElementById("nav-links").classList.toggle("active");
-    }
 
-    function redirigirAContacto(nombreProducto) {
-      const mensaje = encodeURIComponent("Producto: " + nombreProducto);
-      window.location.href = `contacto.html?mensaje=${mensaje}`;
-    }
-  </script>
+    <div class="producto-card" onclick="redirigirAContacto('Stickers Stray Kids')">
+      <img src="img/skzstickers.jpg" alt="SKZ sticker">
+      <p>Stickers SKZ</p>
+      <p>$200 por 1</p>
+      <p>$500 por 3</p>
     </div>
   </section>
 
   <section id="twice" class="productos-section">
     <h2>Productos de TWICE</h2>
-    <div class="producto-card" onclick="redirigirAContacto('Lomocards TWICE')">
-      <img src="img/twicelomocards.jpg" alt="Lomocard TWICE">
-      <p>Lomocards TWICE</p>
-      <p><strong>$1000 pesos por Lomo</strong></p>
-      <p><strong>$1500 pesos por 2 Lomos</strong></p>
-      <script>
-    function toggleMenu() {
-      document.getElementById("nav-links").classList.toggle("active");
-    }
 
-    function redirigirAContacto(nombreProducto) {
-      const mensaje = encodeURIComponent("Producto: " + nombreProducto);
-      window.location.href = `contacto.html?mensaje=${mensaje}`;
-    }
-  </script>
+    <div class="producto-card" onclick="redirigirAContacto('LomoCards TWICE')">
+      <img src="img/twicelomocards.jpg" alt="Lomocard TWICE">
+      <p>LomoCards TWICE</p>
+      <p>$1000 por 1 lomo</p>
+      <p>$2000 por 2 lomos</p>
+      <p>$1500 (1 promo + 1 normal)</p>
     </div>
-    <div class="producto-card" onclick="redirigirAContacto('Stickers oficiales TWICE')">
+
+    <div class="producto-card" onclick="redirigirAContacto('Stickers TWICE')">
       <img src="img/twicestickers.png" alt="Stickers TWICE">
-      <p>Stickers oficiales</p>
-      <p><strong>$500 pesos por sticker</strong></p>
+      <p>Stickers oficiales TWICE</p>
+      <p>$200 por 1</p>
+      <p>$500 por 3</p>
     </div>
   </section>
 
   <section id="babymonster" class="productos-section">
     <h2>Productos de BABYMONSTER</h2>
-    <div class="producto-card" onclick="redirigirAContacto('Lomocards BabyMonster')">
+
+    <div class="producto-card" onclick="redirigirAContacto('LomoCards BABYMONSTER')">
       <img src="img/bm-lomo.jpg" alt="BABYMONSTER Lomo">
-      <p>Lomocards BabyMonster</p>
-      <p><strong>$1500 pesos por 2 Lomos</strong></p>
-      <script>
-    function toggleMenu() {
-      document.getElementById("nav-links").classList.toggle("active");
-    }
-
-    function redirigirAContacto(nombreProducto) {
-      const mensaje = encodeURIComponent("Producto: " + nombreProducto);
-      window.location.href = `contacto.html?mensaje=${mensaje}`;
-    }
-  </script>
+      <p>LomoCards BABYMONSTER</p>
+      <p>$1000 por 1 promo</p>
+      <p>$1500 por 2 promo</p>
     </div>
-    <div class="producto-card" onclick="redirigirAContacto('Stickers BABYMONSTER')">
-      <img src="img/bmstickers.jpg" alt="stickers BABYMONSTER">
-      <p>Stickers BABYMONSTER</p>
-      <p><strong>$500 pesos por sticker</strong></p>
-      <script>
-    function toggleMenu() {
-      document.getElementById("nav-links").classList.toggle("active");
-    }
 
-    function redirigirAContacto(nombreProducto) {
-      const mensaje = encodeURIComponent("Producto: " + nombreProducto);
-      window.location.href = `contacto.html?mensaje=${mensaje}`;
-    }
-  </script>
+    <div class="producto-card" onclick="redirigirAContacto('Stickers BABYMONSTER')">
+      <img src="img/bmstickers.jpg" alt="Stickers BABYMONSTER">
+      <p>Stickers BABYMONSTER</p>
+      <p>$200 por 1</p>
+      <p>$500 por 3</p>
     </div>
   </section>
+
+  <footer class="contacto-info">
+    <p>¿Tienes dudas? Contáctanos por WhatsApp: XX xxx xxx xxx 📱 o al correo: <a href="mailto:xxxxxxx@gmail.com">xxxxxxx@gmail.com</a></p>
+  </footer>
 
   <script>
     function toggleMenu() {
@@ -149,10 +129,9 @@
 
     function redirigirAContacto(nombreProducto) {
       const mensaje = encodeURIComponent("Producto: " + nombreProducto);
-      window.location.href = `contacto.html?mensaje=${mensaje}`;
+      localStorage.setItem("mensajeGuardado", decodeURIComponent(mensaje));
+      window.location.href = `contacto.html`;
     }
   </script>
 </body>
 </html>
-
-
